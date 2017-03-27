@@ -163,11 +163,12 @@ public class CoTermNSPair {
 		private Text word = new Text();		
 		private TextPair textPair = new TextPair();
 		
-		private List<Text> preWord = new ArrayList<Text>();
+		// private List<Text> preWord = new ArrayList<Text>();
 
 	    public void map(Object key, Text value, Context context
 	                    ) throws IOException, InterruptedException {
 	      StringTokenizer itr = new StringTokenizer(value.toString());
+          private List<Text> preWord = new ArrayList<Text>();
 	      while (itr.hasMoreTokens()) {
 	        word.set(itr.nextToken().toLowerCase());
 	        for(Text pWord : preWord) {
